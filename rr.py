@@ -25,12 +25,13 @@ recipes = {
     "Mango Lassi": ["yogurt", "mango", "sugar", "cardamom"],
     "Buttermilk": ["yogurt", "water", "spices", "salt"],
     "Masala Chai": ["tea leaves", "milk", "sugar", "spices"],
+    "Coffee": ["coffee powder", "water", "milk", "sugar"],
     "Mojito": ["mint leaves", "lime", "sugar", "soda water"]
 }
 
 # Streamlit app
 st.title("Recipe Recommendation App")
-st.write("Enter the ingredients you have:")
+st.write("Enter at least two ingredients you have:")
 
 # User input for ingredients
 user_ingredients = st.text_input("Ingredients (comma-separated):", "")
@@ -39,17 +40,21 @@ if user_ingredients:
     # Split the input into a list of ingredients
     user_ingredients_list = [ingredient.strip().lower() for ingredient in user_ingredients.split(",")]
 
-    st.write("You have the following ingredients:", user_ingredients_list)
-
-    # Find matching recipes
-    matching_recipes = []
-    for recipe, ingredients in recipes.items():
-        if all(ingredient in user_ingredients_list for ingredient in ingredients):
-            matching_recipes.append(recipe)
-
-    if matching_recipes:
-        st.write("You can make the following recipes:")
-        for recipe in matching_recipes:
-            st.subheader(recipe)
+    if len(user_ingredients_list) < 2:
+        st.write("Please enter at least two ingredients.")
     else:
-        st.write("No recipes found with the provided ingredients.")
+        st.write("You have the following ingredients:", user_ingredients_list)
+
+        # Find matching recipes
+        matching_recipes = []
+        for recipe, ingredients in recipes.items():
+            # Check if at least two ingredients match
+            if sum(1 for ingredient in user_ingredients_list if ingredient in ingredients) >= 2:
+                matching_recipes.append(recipe)
+
+        if matching_recipes:
+            st.write("You can make the following recipes:")
+            for recipe in matching_recipes:
+                st.subheader(recipe)
+        else:
+            st.write("No recipes found with the provided ingredients.")
