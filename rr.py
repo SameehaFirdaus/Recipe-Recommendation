@@ -75,21 +75,4 @@ recipes = {
         "instructions": "Make balls from chenna, boil in sugar syrup until spongy."
     },
     "Kheer": {
-        "ingredients": ["rice", "milk", "sugar", "cardamom", "nuts"],
-        "instructions": "Cook rice in milk, add sugar and cardamom, and garnish with nuts."
-    },
-    "Lassi": {
-        "ingredients": ["yogurt", "sugar", "water", "cardamom"],
-        "instructions": "Blend yogurt with sugar and water, and serve chilled."
-    },
-    "Mango Lassi": {
-        "ingredients": ["yogurt", "mango", "sugar", "cardamom"],
-        "instructions": "Blend yogurt with mango and sugar until smooth."
-    },
-    "Buttermilk": {
-        "ingredients": ["yogurt", "water", "spices", "salt"],
-        "instructions": "Whisk yogurt with water and spices, and serve chilled."
-    },
-    "Masala Chai": {
-        "ingredients": ["tea leaves", "milk", "sugar", "spices"],
-        "instructions": "Boil tea leaves with spices, add milk and
+        "ingredients": ["rice", "milk",
