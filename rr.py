@@ -75,4 +75,6 @@ recipes = {
         "instructions": "Make balls from chenna, boil in sugar syrup until spongy."
     },
     "Kheer": {
-        "ingredients": ["rice", "milk",
+        "ingredients": ["rice", "milk","dryfruits"]
+    }
+}
