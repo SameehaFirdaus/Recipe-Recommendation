@@ -5,7 +5,7 @@ A simple Python application that recommends recipes based on the ingredients you
 ## Features
 
 - Enter ingredients to get recipe recommendations.
-- Simple and user-friendly interface built with Streamlit.
+- Simple & user-friendly interface built with Streamlit.
 
 ## Installation
 
