@@ -14,3 +14,4 @@ A simple Python application that recommends recipes based on the ingredients you
    ```bash
    git clone https://github.com/SameehaFirdaus/recipe-recommendation.git
    cd recipe-recommendation
+https://33oqhgappmcsm6quursc9ck.streamlit.app/#kheer
